@@ -81,7 +81,7 @@ func New(c *up.Config) (http.Handler, error) {
 			DualStack: true,
 		}).DialContext,
 		ResponseHeaderTimeout: timeout,
-		DisableKeepAlives:     true,
+		DisableKeepAlives:     false,
 	}
 
 	p := &Proxy{
